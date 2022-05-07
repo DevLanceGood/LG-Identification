@@ -1,7 +1,12 @@
 RegisterServerEvent("lg-identification:identify")
 AddEventHandler("lg-identification:identify", function(identity)
     local src = source
-    TriggerClientEvent("lg-identification:identify", -1, identity, GetEntityCoords(GetPlayerPed(src)))
+    local playerCoords = GetEntityCoords(GetPlayerPed(src))
+    for k,v in ipairs(GetPlayers()) do
+        if #(playerCoords - GetEntityCoords(GetPlayerPed(v))) < Config.Data.DisplayDistance then
+            TriggerClientEvent("lg-identification:identify", v, identity)
+        end
+    end
 end)
 
 function SetIdentification(source, identity)
