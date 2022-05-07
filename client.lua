@@ -30,9 +30,7 @@ end)
 
 RegisterNetEvent("lg-identification:identify")
 AddEventHandler("lg-identification:identify", function(data, coords)
-    if #(coords - GetEntityCoords(PlayerPedId())) < Config.Data.DisplayDistance then
-        SendNUIMessage({type = "id", data = data})
-    end
+    SendNUIMessage({type = "id", data = data})
 end)
 
 Citizen.CreateThread(function() 
