@@ -76,7 +76,7 @@ function ShowID()
     local badgeProp = CreateObject(model, coords.x, coords.y, coords.z + 0.2, true, true, true)
     local boneIndex = GetPedBoneIndex(ped, 28422)
     
-    AttachEntityToEntity(badgeProp, ped, boneIndex, 0.065, 0.029, -0.035, 80.0, -1.90, 75.0, true, true, false, true, 1, true)
+    AttachEntityToEntity(badgeProp, ped, boneIndex, 0.15, 0.030, -0.025, 90.0, -1.90, 140.0, true, true, false, true, 1, true)
     TaskPlayAnim(ped, anim.dictionary, anim.animation, 8.0, -8, 10.0, 49, 0, 0, 0, 0)
     Citizen.Wait(3000)
     ClearPedSecondaryTask(ped)
