@@ -17,3 +17,6 @@ This also comes with three default templates, you can add more via the config & 
 ## Preview
 
 https://www.youtube.com/watch?v=B0LdxRJEiAM
+
+## Common errors
+WARNING. Do not try to edit the name of the resource (default: lg-identification), it will broke the editing part of script, making you to force ensure the resource to be able to moove again.
